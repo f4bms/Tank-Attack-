@@ -1,6 +1,7 @@
 /home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp: /home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/GameLaunch.h \
   /home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/moc_predefs.h \
   /home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/Graph.h \
+  /home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/Player.h \
   /home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/Tank.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -322,6 +323,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \

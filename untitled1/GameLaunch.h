@@ -11,6 +11,7 @@
 #include <iostream>
 #include "Graph.h"
 #include "Tank.h"
+#include "Player.h"
 
 class GameLaunch : public QGraphicsView {
     Q_OBJECT
@@ -21,9 +22,9 @@ private:
     int numRows;
     int numCols;
     int tileSize;
-    bool player1Turn; // este cosillo es para ver quien va jugando
-    QList<Tank*> player1Tanks; // Lista de tanques del jugador 1
-    QList<Tank*> player2Tanks; // Lista de tanques del jugador 2
+
+    Player player1;
+    Player player2;
 
 
     QPoint selectedTankPosition;
@@ -32,7 +33,7 @@ private:
 
 public:
     GameLaunch(QWidget *parent = nullptr)
-        : QGraphicsView(parent), numRows(gameMap.getRows()), numCols(gameMap.getCols()), tileSize(50), player1Turn(true) {
+        : QGraphicsView(parent), numRows(gameMap.getRows()), numCols(gameMap.getCols()), tileSize(50){
         // Configurar la escena
         scene.setSceneRect(0, 0, tileSize * numCols, tileSize * numRows);
         this->setScene(&scene);
@@ -43,11 +44,21 @@ public:
         drawGrid();
         placeInitialTanks();
 
-        setWindowTitle("Game Map with Obstacles - 10x20");
+        setWindowTitle("Tank Attack!");
         setFixedSize(tileSize * numCols + 20, tileSize * numRows + 20);
+
+        player1.setTurn(true);
+        player2.setTurn(false);
     }
 
 protected:
+
+    void switchTurn() {
+        // Cambiar los turnos entre los jugadores
+        player1.setTurn(!player1.getTurn());
+        player2.setTurn(!player2.getTurn());
+    }
+
     // Dibuja la cuadrícula y los obstáculos en la escena
     void drawGrid() {
         for (int row = 0; row < numRows; ++row) {
@@ -76,26 +87,27 @@ protected:
     void placeTank(int row, int col, const QColor &color) {
         Tank *tank = new Tank(row, col, color, &scene);
         if (color == Qt::red || color == Qt::blue) {
-            player1Tanks.append(tank);
+            player1.addTank(tank);
         } else {
-            player2Tanks.append(tank);
+            player2.addTank(tank);
         }
     }
 
 
     Tank* findTankAt(int row, int col) {
-        foreach(Tank *tank, player1Tanks) {
+        foreach(Tank *tank, player1.getTanks()) {
             if (tank->getRow() == row && tank->getCol() == col) {
                 return tank;
             }
         }
-        foreach(Tank *tank, player2Tanks) {
+        foreach(Tank *tank, player2.getTanks()) {
             if (tank->getRow() == row && tank->getCol() == col) {
                 return tank;
             }
         }
         return nullptr;
     }
+
 
     //esto puede ser otra alternativa para no pintarlo
     void highlightTank(QGraphicsEllipseItem *tank) {
@@ -107,12 +119,10 @@ protected:
         tank->setPen(QPen(Qt::NoPen));  // Quitar el borde
     }
 
-    void placeInitialTanks() {
+   void placeInitialTanks() {
     QRandomGenerator *randGen = QRandomGenerator::global();
 
-        /* Se ponen los tanques azules y rojos solo en las primeras dos columnas de la izquierda
-         * aquí primero se ponen los obstaculos y hasta despues de colocan los tanques para q no se bloqueen, etc
-         */
+    // Colocar tanques rojos y azules en las primeras dos columnas de la izquierda
     for (int i = 0; i < 2; ++i) {
         int row, col;
 
@@ -120,95 +130,100 @@ protected:
         do {
             row = randGen->bounded(numRows);
             col = randGen->bounded(0, 2); // Se limitan las columnas
-        } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col)); // Se hace la verificación de q no sea un obstáculo o una celda ocupada
+        } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
 
-        placeTank(row, col, Qt::red); // Se coloca el tanque
-        gameMap.addEdge(row, col); // se pone la celda como ocupadaocupado
+        placeTank(row, col, Qt::red); // Se coloca el tanque y se agrega al jugador 1
+        gameMap.addEdge(row, col); // Marca la celda como ocupada
+        player1.addTank(new Tank(row, col, Qt::red, &scene)); // Agregar el tanque a player1
     }
 
     for (int i = 0; i < 2; ++i) {
         int row, col;
 
-        // Se busacn posiciones aleatorias para los tanques azules
+        // Buscar posiciones aleatorias para los tanques azules
         do {
             row = randGen->bounded(numRows);
             col = randGen->bounded(0, 2);
         } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
 
-        placeTank(row, col, Qt::blue);
+        placeTank(row, col, Qt::blue); // Se coloca el tanque y se agrega al jugador 2
         gameMap.addEdge(row, col);
+        player2.addTank(new Tank(row, col, Qt::blue, &scene)); // Agregar el tanque a player2
     }
 
-    /* Se ponen los tanques amarillos y celestes solo en las primeras dos columnas de la derecha
-     * aquí primero se ponen los obstaculos y hasta despues de colocan los tanques para q no se bloqueen, etc
-     */
+    // Colocar tanques amarillos y celestes en las primeras dos columnas de la derecha
     for (int i = 0; i < 2; ++i) {
         int row, col;
 
-        // Se buscan posiciones aleatorias para los tanques amarillos
+        // Buscar posiciones aleatorias para los tanques amarillos
         do {
             row = randGen->bounded(numRows);
             col = randGen->bounded(numCols - 2, numCols);
         } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
 
-        placeTank(row, col, Qt::yellow);
+        placeTank(row, col, Qt::yellow); // Se coloca el tanque y se agrega al jugador 1
         gameMap.addEdge(row, col);
+        player1.addTank(new Tank(row, col, Qt::yellow, &scene)); // Agregar el tanque a player1
     }
 
     for (int i = 0; i < 2; ++i) {
         int row, col;
 
-        // Se buscanposiciones aleatorias para los celestes
+        // Buscar posiciones aleatorias para los tanques celestes
         do {
             row = randGen->bounded(numRows);
             col = randGen->bounded(numCols - 2, numCols);
         } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
 
-        placeTank(row, col, Qt::cyan);
+        placeTank(row, col, Qt::cyan); // Se coloca el tanque y se agrega al jugador 2
         gameMap.addEdge(row, col);
+        player2.addTank(new Tank(row, col, Qt::cyan, &scene)); // Agregar el tanque a player2
     }
 }
 
- void mousePressEvent(QMouseEvent *event) override {
-    if (event->button() == Qt::RightButton) {
-        // Se obtiene q es lo q se está tocando
-        QGraphicsItem *item = itemAt(event->pos());
 
-        // Por si no me sirven están estos mensajes
-        if (!item) {
-            qDebug() << "No item found at position" << event->pos();
-            return;
-        }
+    void mousePressEvent(QMouseEvent *event) override {
+        if (event->button() == Qt::RightButton) {
+            // Se obtiene el ítem que se está tocando
+            QGraphicsItem *item = itemAt(event->pos());
 
-        // Comprobar si el ítem es un QGraphicsEllipseItem (tanque)-> esto es tricky pq de hecho solo si tocas el tanque de vdd(el circulito) te puedes mover
-        QGraphicsEllipseItem *tank = dynamic_cast<QGraphicsEllipseItem *>(item);
-        if (tank) {
-
-            //Se obtienen las coordenadas de donde está el tanque
-            int row = tank->data(0).toInt();
-            int col = tank->data(1).toInt();
-
-            QGraphicsItem *cellItem = findCellAt(row, col);
-            QGraphicsRectItem *rect = dynamic_cast<QGraphicsRectItem *>(cellItem);
-
-            //esto es para pintar sobre q jugador estoy
-            if (rect) {
-                if (player1Turn) {
-                    rect->setBrush(Qt::magenta);
-                } else {
-                    rect->setBrush(Qt::green);
-                }
-                rect->update();  // Actualizar celda
-                scene.update();  // Forzar actualización (por si no servía jsjs)
-                player1Turn = !player1Turn;  // Cambiar de turno
-            } else {
-                qDebug() << "No rect found at cell position (" << row << ", " << col << ")";
+            if (!item) {
+                qDebug() << "No item found at position" << event->pos();
+                return;
             }
-        } else {
-            qDebug() << "Item at position is not a QGraphicsEllipseItem (tank)";
+
+            // Comprobar si el ítem es un QGraphicsEllipseItem (tanque)
+            QGraphicsEllipseItem *tank = dynamic_cast<QGraphicsEllipseItem *>(item);
+            if (tank) {
+                // Se obtienen las coordenadas del tanque
+                int row = tank->data(0).toInt();
+                int col = tank->data(1).toInt();
+
+                QGraphicsItem *cellItem = findCellAt(row, col);
+                QGraphicsRectItem *rect = dynamic_cast<QGraphicsRectItem *>(cellItem);
+
+                if (rect) {
+                    // Determinar a qué jugador le toca el turno
+                    if (player1.getTurn()) {
+                        rect->setBrush(Qt::magenta); // Color para el jugador 1
+                    } else {
+                        rect->setBrush(Qt::green); // Color para el jugador 2
+                    }
+                    rect->update();  // Actualizar celda
+                    scene.update();  // Forzar actualización de la escena
+
+                    // Cambiar el turno entre los jugadores
+                    player1.setTurn(!player1.getTurn());
+                    player2.setTurn(!player2.getTurn());
+                } else {
+                    qDebug() << "No rect found at cell position (" << row << ", " << col << ")";
+                }
+            } else {
+                qDebug() << "Item at position is not a QGraphicsEllipseItem (tank)";
+            }
         }
     }
-}
+
 
     //hay un find tank at pero el tanque es un circulo no es un rectangulo entonces buscarlo como rectangulo no me serviria de mucho
 QGraphicsItem* findCellAt(int row, int col) {
