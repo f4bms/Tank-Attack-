@@ -16,7 +16,8 @@ find_package(Qt5 COMPONENTS
 add_executable(untitled1 main.cpp
         Graph.h
         GameLaunch.h
-        Tank.h)
+        Tank.h
+        Player.h)
 target_link_libraries(untitled1
         Qt5::Core
         Qt5::Gui
