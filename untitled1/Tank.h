@@ -2,13 +2,21 @@
 #define TANK_H
 
 class Tank {
+private:
+    int row;
+    int col;
+    QColor color;
+    QGraphicsEllipseItem *tankItem;
+    QGraphicsScene *scene;
+    static const int tileSize = 50;
+
 public:
     Tank(int row, int col, const QColor& color, QGraphicsScene *scene)
         : row(row), col(col), color(color), scene(scene) {
         tankItem = scene->addEllipse(col * tileSize + 10, row * tileSize + 10, tileSize - 20, tileSize - 20,
                                       QPen(Qt::NoPen), QBrush(color));
-        tankItem->setData(0, row); // Almacena la fila
-        tankItem->setData(1, col); // Almacena la columna
+        tankItem->setData(0, row); //fila
+        tankItem->setData(1, col); // columna
     }
 
     QGraphicsEllipseItem* getItem() const {
@@ -26,16 +34,9 @@ public:
     void setColor(const QColor& newColor) {
         color = newColor;
         tankItem->setBrush(color);
-        tankItem->update(); // Actualiza el ítem gráfico
+        tankItem->update();
     }
 
-private:
-    int row;
-    int col;
-    QColor color;
-    QGraphicsEllipseItem *tankItem;
-    QGraphicsScene *scene;
-    static const int tileSize = 50; // Definir el tamaño de la celda
 };
 
 

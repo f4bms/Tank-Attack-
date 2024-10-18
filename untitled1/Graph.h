@@ -7,9 +7,9 @@
 class Map {
 
 private:
-    static const int rows = 12;  // Número de filas
-    static const int cols = 18;  // Número de columnas
-    int adjMatrix[rows][cols];  // Matriz de adyacencia 10x20
+    static const int rows = 12;
+    static const int cols = 18;
+    int adjMatrix[rows][cols];  // Matriz de adyacencia
 
 public:
     static const int OBSTACLE = -1;
@@ -39,11 +39,9 @@ public:
     void addEdge(int i, int j) {
         if (isValidIndex(i, j)) {
             adjMatrix[i][j] = 1;
-            // Eliminar la simetría ya que no es una matriz cuadrada
         }
     }
 
-    // eliminar conexión entre dos nodos
     void removeEdge(int i, int j) {
         if (isValidIndex(i, j)) {
             adjMatrix[i][j] = 0;
@@ -51,7 +49,7 @@ public:
     }
 
     void printMatrix() const {
-        if (rows == 0 || cols == 0) {
+        if ( rows == 0 || cols == 0) {
             std::cout << "Matrix is empty." << std::endl;
             return;
         }
@@ -72,7 +70,6 @@ public:
     }
 
 
-    //verificar si dos nodos están conectados
     bool isConnected(int i, int j) const {
         return isValidIndex(i, j) && adjMatrix[i][j] == 1;
     }
@@ -84,18 +81,18 @@ public:
             int row = QRandomGenerator::global()->bounded(0, rows);
             int col = QRandomGenerator::global()->bounded(0, cols);
 
-            // Decidir si el obstáculo será horizontal (0) o vertical (1)
+            // Decidir si el obstáculo va a ser horizontal (0) o vertical (1)
             bool horizontal = QRandomGenerator::global()->bounded(0, 2) == 0;
 
-            // Comprobar si se puede colocar el obstáculo de dos celdas
+            //los obstaculos se hacen de dos celdas
             if (horizontal && col < cols - 1) {  // Obstáculo horizontal
-                if (adjMatrix[row][col] == 0 && adjMatrix[row][col + 1] == 0) { // Comprobar que ambas celdas están libres
+                if (adjMatrix[row][col] == 0 && adjMatrix[row][col + 1] == 0) { // celdas libres
                     adjMatrix[row][col] = -1;       // Primera celda
                     adjMatrix[row][col + 1] = -1;   // Segunda celda
                     obstaclesAdded++;
                 }
             } else if (!horizontal && row < rows - 1) {  // Obstáculo vertical
-                if (adjMatrix[row][col] == 0 && adjMatrix[row + 1][col] == 0) { // Comprobar que ambas celdas están libres
+                if (adjMatrix[row][col] == 0 && adjMatrix[row + 1][col] == 0) {// celdas libres
                     adjMatrix[row][col] = -1;       // Primera celda
                     adjMatrix[row + 1][col] = -1;   // Segunda celda
                     obstaclesAdded++;

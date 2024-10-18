@@ -8,96 +8,19 @@ untitled1_autogen/timestamp: \
 	/home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
 	/home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/moc_predefs.h \
 	/home/fabs/Proyecto2Datos2/Tank-Attack-/untitled1/main.cpp \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseArguments.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake \
-	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-Determine-CXX.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake \
 	/opt/CLion/clion-2024.2.2/bin/cmake/linux/x64/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake \
