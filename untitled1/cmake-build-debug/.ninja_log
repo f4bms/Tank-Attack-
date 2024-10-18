@@ -1,0 +1,6 @@
+# ninja log v6
+1	226	1729208426624533657	untitled1_autogen/timestamp	88c5bf118037df2c
+1	226	1729208426624533657	untitled1_autogen/mocs_compilation.cpp	88c5bf118037df2c
+227	2964	1729208426631533495	CMakeFiles/untitled1.dir/main.cpp.o	aa3e7027fd69ef7a
+226	2975	1729208426630533518	CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.o	cba9944f2b2f0a4e
+2975	3327	1729208429379470109	untitled1	32ad15c754954f16
