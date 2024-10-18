@@ -134,7 +134,6 @@ protected:
 
         placeTank(row, col, Qt::red); // Se coloca el tanque y se agrega al jugador 1
         gameMap.addEdge(row, col); // Marca la celda como ocupada
-        player1.addTank(new Tank(row, col, Qt::red, &scene)); // Agregar el tanque a player1
     }
 
     for (int i = 0; i < 2; ++i) {
@@ -148,7 +147,6 @@ protected:
 
         placeTank(row, col, Qt::blue); // Se coloca el tanque y se agrega al jugador 2
         gameMap.addEdge(row, col);
-        player2.addTank(new Tank(row, col, Qt::blue, &scene)); // Agregar el tanque a player2
     }
 
     // Colocar tanques amarillos y celestes en las primeras dos columnas de la derecha
@@ -163,7 +161,6 @@ protected:
 
         placeTank(row, col, Qt::yellow); // Se coloca el tanque y se agrega al jugador 1
         gameMap.addEdge(row, col);
-        player1.addTank(new Tank(row, col, Qt::yellow, &scene)); // Agregar el tanque a player1
     }
 
     for (int i = 0; i < 2; ++i) {
@@ -177,52 +174,79 @@ protected:
 
         placeTank(row, col, Qt::cyan); // Se coloca el tanque y se agrega al jugador 2
         gameMap.addEdge(row, col);
-        player2.addTank(new Tank(row, col, Qt::cyan, &scene)); // Agregar el tanque a player2
     }
 }
 
 
-    void mousePressEvent(QMouseEvent *event) override {
-        if (event->button() == Qt::RightButton) {
-            // Se obtiene el ítem que se está tocando
-            QGraphicsItem *item = itemAt(event->pos());
 
-            if (!item) {
-                qDebug() << "No item found at position" << event->pos();
-                return;
+void mousePressEvent(QMouseEvent *event) override {
+    if (event->button() == Qt::RightButton) {
+        // Se obtiene el ítem que se está tocando
+        QGraphicsItem *item = itemAt(event->pos());
+
+        if (!item) {
+            qDebug() << "No item found at position" << event->pos();
+            return;
+        }
+
+        // Comprobar si el ítem es un QGraphicsEllipseItem (tanque)
+        QGraphicsEllipseItem *tank = dynamic_cast<QGraphicsEllipseItem *>(item);
+        if (tank) {
+            // Se obtienen las coordenadas del tanque
+            int row = tank->data(0).toInt();
+            int col = tank->data(1).toInt();
+
+            // Verificar a qué jugador pertenece el tanque
+            bool isPlayer1Tank = false;
+            for (Tank* t : player1.getTanks()) {
+                if (t->getRow() == row && t->getCol() == col) {
+                    isPlayer1Tank = true;
+                    break;
+                }
             }
 
-            // Comprobar si el ítem es un QGraphicsEllipseItem (tanque)
-            QGraphicsEllipseItem *tank = dynamic_cast<QGraphicsEllipseItem *>(item);
-            if (tank) {
-                // Se obtienen las coordenadas del tanque
-                int row = tank->data(0).toInt();
-                int col = tank->data(1).toInt();
+            bool isPlayer2Tank = false;
+            for (Tank* t : player2.getTanks()) {
+                if (t->getRow() == row && t->getCol() == col) {
+                    isPlayer2Tank = true;
+                    break;
+                }
+            }
 
-                QGraphicsItem *cellItem = findCellAt(row, col);
-                QGraphicsRectItem *rect = dynamic_cast<QGraphicsRectItem *>(cellItem);
-
+            // Comprobar si es el turno del jugador correspondiente
+            if (player1.getTurn() && isPlayer1Tank) {
+                // Acciones para el tanque del jugador 1
+                QGraphicsRectItem *rect = dynamic_cast<QGraphicsRectItem *>(findCellAt(row, col));
                 if (rect) {
-                    // Determinar a qué jugador le toca el turno
-                    if (player1.getTurn()) {
-                        rect->setBrush(Qt::magenta); // Color para el jugador 1
-                    } else {
-                        rect->setBrush(Qt::green); // Color para el jugador 2
-                    }
+                    rect->setBrush(Qt::magenta); // Color para el jugador 1
                     rect->update();  // Actualizar celda
                     scene.update();  // Forzar actualización de la escena
-
-                    // Cambiar el turno entre los jugadores
-                    player1.setTurn(!player1.getTurn());
-                    player2.setTurn(!player2.getTurn());
-                } else {
-                    qDebug() << "No rect found at cell position (" << row << ", " << col << ")";
                 }
+
+                qDebug() << "Jugador 1 actuó sobre el tanque en posición (" << row << ", " << col << ")";
+                switchTurn();  // Cambiar el turno después de la acción
+            } else if (player2.getTurn() && isPlayer2Tank) {
+                // Acciones para el tanque del jugador 2
+                QGraphicsRectItem *rect = dynamic_cast<QGraphicsRectItem *>(findCellAt(row, col));
+                if (rect) {
+                    rect->setBrush(Qt::green); // Color para el jugador 2
+                    rect->update();  // Actualizar celda
+                    scene.update();  // Forzar actualización de la escena
+                }
+
+                qDebug() << "Jugador 2 actuó sobre el tanque en posición (" << row << ", " << col << ")";
+                switchTurn();  // Cambiar el turno después de la acción
             } else {
-                qDebug() << "Item at position is not a QGraphicsEllipseItem (tank)";
+                qDebug() << "No puedes interactuar con ese tanque.";
             }
+        } else {
+            qDebug() << "Item at position is not a QGraphicsEllipseItem (tank)";
         }
     }
+}
+
+
+
 
 
     //hay un find tank at pero el tanque es un circulo no es un rectangulo entonces buscarlo como rectangulo no me serviria de mucho
