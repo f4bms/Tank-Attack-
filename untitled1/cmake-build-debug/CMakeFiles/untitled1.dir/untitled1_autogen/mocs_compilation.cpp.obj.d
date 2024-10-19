@@ -478,6 +478,8 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
  C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
  C:/Qt/6.7.2/mingw_64/include/QtGui/qcolor.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qpoint.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/queue \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/deque \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_deque.h \

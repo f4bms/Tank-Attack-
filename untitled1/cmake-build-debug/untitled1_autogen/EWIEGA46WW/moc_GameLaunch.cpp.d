@@ -264,6 +264,7 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
