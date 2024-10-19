@@ -225,12 +225,6 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Tank-Attack-/untitled1/Algorithms.h",
-			"MU",
-			"EWIEGA46WW/moc_Algorithms.cpp",
-			null
-		],
-		[
 			"C:/Tank-Attack-/untitled1/GameLaunch.h",
 			"MU",
 			"EWIEGA46WW/moc_GameLaunch.cpp",

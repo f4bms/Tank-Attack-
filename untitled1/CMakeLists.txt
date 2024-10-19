@@ -20,7 +20,7 @@ add_executable(untitled1 main.cpp
         GameLaunch.h
         Tank.h
         Player.h
-        Algorithms.h)
+)
 target_link_libraries(untitled1
         Qt6::Core
         Qt6::Gui

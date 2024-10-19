@@ -459,5 +459,6 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qwidget.h \
   C:/Tank-Attack-/untitled1/Graph.h \
+  C:/Tank-Attack-/untitled1/Pathfinding.h \
   C:/Tank-Attack-/untitled1/Player.h \
   C:/Tank-Attack-/untitled1/Tank.h

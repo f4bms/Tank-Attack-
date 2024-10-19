@@ -462,9 +462,6 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qwidget.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
- C:/Tank-Attack-/untitled1/Graph.h \
- C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
- C:/Qt/6.7.2/mingw_64/include/QtCore/qrandom.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
@@ -474,16 +471,20 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
+ C:/Tank-Attack-/untitled1/Graph.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qrandom.h \
  C:/Tank-Attack-/untitled1/Tank.h \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
  C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
  C:/Qt/6.7.2/mingw_64/include/QtGui/qcolor.h \
- C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
- C:/Qt/6.7.2/mingw_64/include/QtCore/qpoint.h \
+ C:/Tank-Attack-/untitled1/Player.h \
+ C:/Tank-Attack-/untitled1/Pathfinding.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/queue \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/deque \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_deque.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/deque.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_queue.h \
- C:/Tank-Attack-/untitled1/Player.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qpoint.h \
  C:/Qt/6.7.2/mingw_64/include/QtCore/qtmochelpers.h
