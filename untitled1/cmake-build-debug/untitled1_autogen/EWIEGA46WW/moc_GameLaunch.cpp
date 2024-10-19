@@ -1,48 +1,51 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'GameLaunch.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.13)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include <memory>
 #include "../../../GameLaunch.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
+
+#include <QtCore/qtmochelpers.h>
+
+#include <memory>
+
+
+#include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'GameLaunch.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.13. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.7.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
-QT_BEGIN_MOC_NAMESPACE
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
+#endif
+
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_GameLaunch_t {
-    QByteArrayData data[1];
-    char stringdata0[11];
-};
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_GameLaunch_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_GameLaunch_t qt_meta_stringdata_GameLaunch = {
-    {
-QT_MOC_LITERAL(0, 0, 10) // "GameLaunch"
+QT_WARNING_DISABLE_GCC("-Wuseless-cast")
+namespace {
 
-    },
+#ifdef QT_MOC_HAS_STRINGDATA
+struct qt_meta_stringdata_CLASSGameLaunchENDCLASS_t {};
+constexpr auto qt_meta_stringdata_CLASSGameLaunchENDCLASS = QtMocHelpers::stringData(
     "GameLaunch"
-};
-#undef QT_MOC_LITERAL
+);
+#else  // !QT_MOC_HAS_STRINGDATA
+#error "qtmochelpers.h not found or too old."
+#endif // !QT_MOC_HAS_STRINGDATA
+} // unnamed namespace
 
-static const uint qt_meta_data_GameLaunch[] = {
+Q_CONSTINIT static const uint qt_meta_data_CLASSGameLaunchENDCLASS[] = {
 
  // content:
-       8,       // revision
+      12,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
@@ -55,6 +58,19 @@ static const uint qt_meta_data_GameLaunch[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject GameLaunch::staticMetaObject = { {
+    QMetaObject::SuperData::link<QGraphicsView::staticMetaObject>(),
+    qt_meta_stringdata_CLASSGameLaunchENDCLASS.offsetsAndSizes,
+    qt_meta_data_CLASSGameLaunchENDCLASS,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSGameLaunchENDCLASS_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<GameLaunch, std::true_type>
+    >,
+    nullptr
+} };
+
 void GameLaunch::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
@@ -62,16 +78,6 @@ void GameLaunch::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     (void)_c;
     (void)_a;
 }
-
-QT_INIT_METAOBJECT const QMetaObject GameLaunch::staticMetaObject = { {
-    QMetaObject::SuperData::link<QGraphicsView::staticMetaObject>(),
-    qt_meta_stringdata_GameLaunch.data,
-    qt_meta_data_GameLaunch,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *GameLaunch::metaObject() const
 {
@@ -81,7 +87,7 @@ const QMetaObject *GameLaunch::metaObject() const
 void *GameLaunch::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_GameLaunch.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CLASSGameLaunchENDCLASS.stringdata0))
         return static_cast<void*>(this);
     return QGraphicsView::qt_metacast(_clname);
 }
@@ -92,4 +98,3 @@ int GameLaunch::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     return _id;
 }
 QT_WARNING_POP
-QT_END_MOC_NAMESPACE
