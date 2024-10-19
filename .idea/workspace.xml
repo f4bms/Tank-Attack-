@@ -24,36 +24,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ec1637-9ddd-4dd0-8113-34e4868f8c66" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/untitled1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled1/Tank.h" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/Tank.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-cc3464ccd017a71ec178.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3a6877f1d98e0ad7373a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/.cmake/api/v1/reply/target-untitled1_autogen-Debug-1958c893d00076deb952.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/.cmake/api/v1/reply/target-untitled1_autogen_timestamp_deps-Debug-2616ed40209206cdb836.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-536a7eaeba1a33fdf7c1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/clean_additional.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp.d" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/deps" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/moc_predefs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729311093216</updated>
       <workItem from="1729311094542" duration="943000" />
-      <workItem from="1729312091791" duration="4072000" />
+      <workItem from="1729312091791" duration="7895000" />
     </task>
     <servers />
   </component>
