@@ -23,11 +23,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ec1637-9ddd-4dd0-8113-34e4868f8c66" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir/compiler_depend.make" afterDir="false" />
-    </list>
+    <list default="true" id="e8ec1637-9ddd-4dd0-8113-34e4868f8c66" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +41,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/f4bms/Tank-Attack-.git",
+    "accountId": "7fe40e76-d6ce-4a56-bc47-184498c46cd9"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -97,7 +99,7 @@
       <updated>1729311093216</updated>
       <workItem from="1729311094542" duration="943000" />
       <workItem from="1729312091791" duration="8414000" />
-      <workItem from="1729343339309" duration="7313000" />
+      <workItem from="1729343339309" duration="7730000" />
     </task>
     <servers />
   </component>
