@@ -41,6 +41,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "LiaV11"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/f4bms/Tank-Attack-.git",
@@ -99,7 +105,7 @@
       <updated>1729311093216</updated>
       <workItem from="1729311094542" duration="943000" />
       <workItem from="1729312091791" duration="8414000" />
-      <workItem from="1729343339309" duration="7730000" />
+      <workItem from="1729343339309" duration="8060000" />
     </task>
     <servers />
   </component>
