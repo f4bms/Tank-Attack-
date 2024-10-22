@@ -5,9 +5,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_PREFIX_PATH "/home/fabs/Qt/6.8.0/gcc_64")
 
 
-find_package(Qt5 COMPONENTS
+
+find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
@@ -17,10 +19,11 @@ add_executable(untitled1 main.cpp
         Graph.h
         GameLaunch.h
         Tank.h
-        Player.h)
+        Player.h
+)
 target_link_libraries(untitled1
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Widgets
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
 )
 

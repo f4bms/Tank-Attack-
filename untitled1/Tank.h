@@ -1,6 +1,10 @@
 #ifndef TANK_H
 #define TANK_H
 
+#include <QGraphicsEllipseItem>
+#include <QGraphicsScene>
+#include <QColor>
+
 class Tank {
 private:
     int row;
@@ -15,11 +19,11 @@ public:
         : row(row), col(col), color(color), scene(scene) {
         tankItem = scene->addEllipse(col * tileSize + 10, row * tileSize + 10, tileSize - 20, tileSize - 20,
                                       QPen(Qt::NoPen), QBrush(color));
-        tankItem->setData(0, row); //fila
+        tankItem->setData(0, row); // fila
         tankItem->setData(1, col); // columna
     }
 
-    QGraphicsEllipseItem* getItem() const {
+    QGraphicsEllipseItem* getGraphicsItem() const {
         return tankItem;
     }
 
@@ -37,10 +41,17 @@ public:
         tankItem->update();
     }
 
+    QColor getColor() const {
+        return color;
+    }
+
+    void updatePosition(int newRow, int newCol) {
+        row = newRow;
+        col = newCol;
+        tankItem->setRect(col * tileSize + 10, row * tileSize + 10, tileSize - 20, tileSize - 20);
+        tankItem->setData(0, row);
+        tankItem->setData(1, col);
+    }
 };
 
-
-
-
-
-#endif //TANK_H
+#endif // TANK_H
