@@ -18,8 +18,6 @@ public:
     // Constructor para inicializar la matriz con espacios libres
     Map() {
         resetMatrix();
-        generateObstacles();
-        printMatrix();
     }
 
     // Reiniciar la matriz
@@ -123,7 +121,6 @@ public:
         }
     }
 
-    // Comprobar si una celda es un obstáculo
     bool isObstacle(int i, int j) const {
         return isValidIndex(i, j) && adjMatrix[i][j] == OBSTACLE;
     }

@@ -27,34 +27,101 @@ private:
 
     Player player1;
     Player player2;
-    Tank* selectedTank = nullptr; // Tanque seleccionado
-    QList<QGraphicsLineItem*> currentPathLines; // Lista para almacenar las líneas de la ruta actual
+    Tank* selectedTank = nullptr;
+    QList<QGraphicsLineItem*> currentPathLines;
+
+
+    QList<QGraphicsTextItem*> player1HealthTexts;
+    QList<QGraphicsTextItem*> player2HealthTexts;
 
 public:
     GameLaunch(QWidget *parent = nullptr)
         : QGraphicsView(parent), numRows(gameMap.getNumRows()), numCols(gameMap.getNumCols()), tileSize(50) {
         // Configurar la escena
-        scene.setSceneRect(0, 0, tileSize * numCols, tileSize * numRows);
+        scene.setSceneRect(0, 0, tileSize * numCols, tileSize * (numRows + 1.5));
         this->setScene(&scene);
 
         gameMap.generateObstacles();
-        gameMap.printMatrix(); // Imprimir la matriz después de generar obstáculos
         drawGrid();
         placeInitialTanks();
+        gameMap.printMatrix();
+
+        QGraphicsRectItem *healthArea = scene.addRect(0, tileSize * numRows, tileSize * numCols, tileSize * 1.5 , QPen(Qt::NoPen), QBrush(Qt::lightGray));
+        QGraphicsTextItem *player1Label = new QGraphicsTextItem("Player 1:");
+        player1Label->setPos(10, tileSize * numRows + 10);
+        player1Label->setDefaultTextColor(Qt::black);
+        scene.addItem(player1Label);
+
+        int startX1 = 100;
+        int startY = tileSize * numRows + 10;
+
+        for (int i = 0; i < 4; ++i) {
+            QGraphicsTextItem *healthText = new QGraphicsTextItem();
+            healthText->setPos(startX1 + i * 150, startY);
+            healthText->setDefaultTextColor(Qt::black);
+            player1HealthTexts.append(healthText);
+            scene.addItem(healthText);
+        }
+
+        // Player 2 label
+        QGraphicsTextItem *player2Label = new QGraphicsTextItem("Player 2:");
+        player2Label->setPos(10, tileSize * numRows + 40);
+        player2Label->setDefaultTextColor(Qt::black);
+        scene.addItem(player2Label);
+
+        int startX2 = 100;
+        startY += 30;
+
+        for (int i = 0; i < 4; ++i) {
+            QGraphicsTextItem *healthText = new QGraphicsTextItem();
+            healthText->setPos(startX2 + i * 150, startY);
+            healthText->setDefaultTextColor(Qt::black);
+            player2HealthTexts.append(healthText);
+            scene.addItem(healthText);
+        }
+
 
         setWindowTitle("Tank Attack!");
-        setFixedSize(tileSize * numCols + 20, tileSize * numRows + 20);
+        setResizeAnchor(QGraphicsView::AnchorViewCenter);
 
         player1.setTurn(true);
         player2.setTurn(false);
+
+        updateHealthDisplay(); // Mostrar la vida inicial
+        fitInView(scene.sceneRect(), Qt::KeepAspectRatio);
+
+
     }
 
 protected:
+
+    void resizeEvent(QResizeEvent *event) override {
+        QGraphicsView::resizeEvent(event);
+        fitInView(scene.sceneRect(), Qt::KeepAspectRatio);
+    }
+
     void switchTurn() {
         // Cambiar los turnos entre los jugadores
         player1.setTurn(!player1.getTurn());
         player2.setTurn(!player2.getTurn());
+
+        //esto se le agregó
         clearCurrentPath(); // Borrar la ruta actual al cambiar de turno
+    }
+    void updateHealthDisplay() {
+        // Actualizar la visualización de la vida de los tanques del jugador 1
+        for (int i = 0; i < player1HealthTexts.size(); ++i) {
+            if (i < player1.getTanks().size()) {
+                player1HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2").arg(i + 1).arg(player1.getTanks()[i]->getHealth()));
+            }
+        }
+
+        // Actualizar la visualización de la vida de los tanques del jugador 2
+        for (int i = 0; i < player2HealthTexts.size(); ++i) {
+            if (i < player2.getTanks().size()) {
+                player2HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2").arg(i + 1).arg(player2.getTanks()[i]->getHealth()));
+            }
+        }
     }
 
     void drawGrid() {
@@ -62,8 +129,12 @@ protected:
             for (int col = 0; col < numCols; ++col) {
                 QGraphicsRectItem *rect = scene.addRect(col * tileSize, row * tileSize, tileSize, tileSize);
                 if (gameMap.isObstacle(row, col)) {
-                    rect->setBrush(Qt::red);
+                    rect->setBrush(Qt::magenta);
                 } else {
+
+                    /* en la docu aquí se puede explicar q hubo problemas con esto.
+                    * puedo poner q cuando se estaba buscando para hacer el tracking no se estaba pintando pq estaba vacio no blanco
+                    */
                     rect->setBrush(Qt::white);
                     rect->setPen(QPen(Qt::black));
                 }
@@ -71,46 +142,96 @@ protected:
         }
     }
 
-    void placeTank(int row, int col, const QColor &color) {
-        Tank *tank = new Tank(row, col, color, &scene);
-        if (color == Qt::red || color == Qt::blue) {
-            player1.addTank(tank);
-        } else {
-            player2.addTank(tank);
-        }
-    }
 
-    void placeInitialTanks() {
+        void placeTank(int row, int col, const QColor &color) {
+            int maxHealth = 100;
+            Tank *tank = new Tank(row, col, color, &scene, maxHealth);
+
+            if (color == Qt::red || color == Qt::blue) {
+                player1.addTank(tank);
+            } else {
+                player2.addTank(tank);
+            }
+        }
+
+        void placeInitialTanks() {
         QRandomGenerator *randGen = QRandomGenerator::global();
-        // Colocar tanques en posiciones iniciales para los dos jugadores
-        for (int i = 0; i < 4; ++i) {
-            int row = randGen->bounded(numRows);
-            int col = randGen->bounded(numCols);
-            while (gameMap.isObstacle(row, col)) {
+
+        // Colocar tanques rojos y azules en las primeras dos columnas de la izquierda
+        for (int i = 0; i < 2; ++i) {
+            int row, col;
+
+            // Buscar posiciones aleatorias para los tanques rojos
+            do {
                 row = randGen->bounded(numRows);
-                col = randGen->bounded(numCols);
-            }
-            placeTank(row, col, (i % 2 == 0) ? Qt::red : Qt::blue);
+                col = randGen->bounded(0, 2); // Se limitan las columnas
+            } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
+
+            placeTank(row, col, Qt::red); // Se coloca el tanque y se agrega al jugador 1
+            gameMap.addEdge(row, col); // Marca la celda como ocupada
         }
-        for (int i = 0; i < 4; ++i) {
-            int row = randGen->bounded(numRows);
-            int col = randGen->bounded(numCols);
-            while (gameMap.isObstacle(row, col)) {
+
+        for (int i = 0; i < 2; ++i) {
+            int row, col;
+
+            // Buscar posiciones aleatorias para los tanques azules
+            do {
                 row = randGen->bounded(numRows);
-                col = randGen->bounded(numCols);
-            }
-            placeTank(row, col, (i % 2 == 0) ? Qt::yellow : Qt::cyan);
+                col = randGen->bounded(0, 2);
+            } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
+
+            placeTank(row, col, Qt::blue); // Se coloca el tanque y se agrega al jugador 2
+            gameMap.addEdge(row, col);
+        }
+
+        // Colocar tanques amarillos y celestes en las primeras dos columnas de la derecha
+        for (int i = 0; i < 2; ++i) {
+            int row, col;
+
+            // Buscar posiciones aleatorias para los tanques amarillos
+            do {
+                row = randGen->bounded(numRows);
+                col = randGen->bounded(numCols - 2, numCols);
+            } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
+
+            placeTank(row, col, Qt::yellow); // Se coloca el tanque y se agrega al jugador 1
+            gameMap.addEdge(row, col);
+        }
+
+        for (int i = 0; i < 2; ++i) {
+            int row, col;
+
+            // Buscar posiciones aleatorias para los tanques celestes
+            do {
+                row = randGen->bounded(numRows);
+                col = randGen->bounded(numCols - 2, numCols);
+            } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
+
+            placeTank(row, col, Qt::cyan); // Se coloca el tanque y se agrega al jugador 2
+            gameMap.addEdge(row, col);
         }
     }
 
+
+    //si se está haciendo el update del movimiento
     void moveTank(Tank *tank, int newRow, int newCol) {
+        qDebug() << "Moving tank from (" << tank->getRow() << ", " << tank->getCol()
+                 << ") to (" << newRow << ", " << newCol << ")";
+
         int oldRow = tank->getRow();
         int oldCol = tank->getCol();
-        gameMap.removeEdge(oldRow, oldCol);
-        gameMap.addEdge(newRow, newCol);
-        tank->updatePosition(newRow, newCol);
-        updateTankGraphics(tank);
+
+        if (!gameMap.isValidIndex(newRow, newCol)) {
+            qDebug() << "Invalid move to (" << newRow << ", " << newCol << ")";
+            return; // Early exit if the move is invalid
+        }
+
+        gameMap.removeEdge(oldRow, oldCol); // Remove the old position
+        gameMap.addEdge(newRow, newCol); // Add the new position
+        tank->updatePosition(newRow, newCol); // Update the tank's internal position
+        updateTankGraphics(tank); // Update the visual representation
     }
+
 
     void updateTankGraphics(Tank *tank) {
         tank->getGraphicsItem()->setRect(tank->getCol() * tileSize + 10, tank->getRow() * tileSize + 10, tileSize - 20, tileSize - 20);
@@ -177,6 +298,8 @@ protected:
         }
     }
 
+
+
     QVector<QPoint> convertToQVector(const std::vector<QPoint> &vec) {
         QVector<QPoint> qVec;
         for (const auto &point : vec) {
@@ -224,6 +347,7 @@ protected:
             }
         }
     }
+
 };
 
 #endif // GAMELAUNCH_H
