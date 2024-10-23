@@ -39,6 +39,7 @@ private:
             // Configurar la escena
             scene.setSceneRect(0, 0, tileSize * numCols, tileSize * numRows);
             this->setScene(&scene);
+            scene.setBackgroundBrush(QBrush(QColor(139, 115, 85))); // Example: Sky blue color
 
             gameMap.generateObstacles();
             drawGrid();
@@ -54,39 +55,41 @@ private:
             player1.setTurn(true);
             player2.setTurn(false);
 
-            updateHealthDisplay(); // Mostrar la vida inicial
         }
 
     protected:
 
         void drawGrid() {
-        // Dibujar la cuadrícula
+
             for (int row = 0; row < numRows; ++row) {
                 for (int col = 0; col < numCols; ++col) {
                     QGraphicsRectItem *rect = scene.addRect(col * tileSize, row * tileSize, tileSize, tileSize);
-                    if (row >= numRows - 2) {  // Verificar si es una de las últimas dos filas
-                        rect->setBrush(Qt::black); // Pintar de negro
-                        rect->setPen(Qt::NoPen);   // Sin borde
+
+                    //esto es la solución que se encontró para poder poner el texto y que no afectara al resto de cosas
+                    if (row >= numRows - 2) {
+                        rect->setBrush(Qt::black);
+                        rect->setPen(Qt::NoPen);
                     } else if (gameMap.isObstacle(row, col)) {
-                        rect->setBrush(Qt::red);
+                        rect->setBrush(QColor(139, 115, 85));
                     } else {
-                        rect->setBrush(Qt::white);
+                        rect->setBrush(QColor(210, 180, 140));
                         rect->setPen(QPen(Qt::black));
                     }
                 }
             }
         }
 
+
+    //esto es para poner las cosillas del display de la vida del jugador
     void placeTexts() {
             QGraphicsTextItem *player1Label = new QGraphicsTextItem("Player 1:");
-            player1Label->setPos(10, tileSize * (numRows - 2) + 10);  // Posicionar el texto en la penúltima fila
+            player1Label->setPos(10, tileSize * (numRows - 2) + 10);
             player1Label->setDefaultTextColor(Qt::white);
             scene.addItem(player1Label);
 
             int startX1 = 100;
             int startY = tileSize * (numRows - 2) + 10;
 
-            // Dibujar la vida de los tanques del jugador 1
             for (int i = 0; i < player1.getTanks().size(); ++i) {
                 Tank* tank = player1.getTanks()[i];
                 QGraphicsTextItem *healthText = new QGraphicsTextItem(QString("Health: %1").arg(tank->getHealth()));
@@ -96,16 +99,14 @@ private:
                 player1HealthTexts.append(healthText);
             }
 
-            // Textos para el jugador 2
             QGraphicsTextItem *player2Label = new QGraphicsTextItem("Player 2:");
-            player2Label->setPos(10, tileSize * (numRows - 1) + 10);  // Justo arriba de la última fila
+            player2Label->setPos(10, tileSize * (numRows - 1) + 10);
             player2Label->setDefaultTextColor(Qt::white);
             scene.addItem(player2Label);
 
             int startX2 = 100;
             int startY2 = tileSize * (numRows - 1) + 10;
 
-            // Dibujar la vida de los tanques del jugador 2
             for (int i = 0; i < player2.getTanks().size(); ++i) {
                 Tank* tank = player2.getTanks()[i];
                 QGraphicsTextItem *healthText = new QGraphicsTextItem(QString("Health: %1").arg(tank->getHealth()));
@@ -113,19 +114,17 @@ private:
                 healthText->setDefaultTextColor(Qt::white);
                 scene.addItem(healthText);
                 player2HealthTexts.append(healthText);
-                scene.addItem(healthText);// Guardar la referencia para actualizar más tarde
+                scene.addItem(healthText);
             }
         }
 
         void updateHealthDisplay() {
-            // Actualizar la visualización de la vida de los tanques del jugador 1
             for (int i = 0; i < player1HealthTexts.size(); ++i) {
                 if (i < player1.getTanks().size()) {
                     player1HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2").arg(i + 1).arg(player1.getTanks()[i]->getHealth()));
                 }
             }
 
-            // Actualizar la visualización de la vida de los tanques del jugador 2
             for (int i = 0; i < player2HealthTexts.size(); ++i) {
                 if (i < player2.getTanks().size()) {
                     player2HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2").arg(i + 1).arg(player2.getTanks()[i]->getHealth()));
@@ -135,7 +134,6 @@ private:
 
 
         void updateHealthTexts() {
-            // Actualizar textos de vida del jugador 1
             for (int i = 0; i < player1.getTanks().size(); ++i) {
                 Tank* tank = player1.getTanks()[i];
                 player1HealthTexts[i]->setPlainText(QString("Health: %1").arg(tank->getHealth()));
