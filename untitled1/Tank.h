@@ -4,6 +4,7 @@
 #include <QGraphicsEllipseItem>
 #include <QGraphicsScene>
 #include <QColor>
+#include "Bullet.h"
 
 class Tank {
 private:
@@ -55,34 +56,40 @@ public:
         tankItem->setData(1, col);
     }
 
-    /*depende de como trabajemos la vida podemos tratar lo del health distinto
-     */
     int getHealth() const {
         return currentHealth;
-
     }
 
-    /*or ejemplo, aquí se le debe de pasar una cantidad de daño y el mae atualiza lo que le pase
-     *Tmb si la vida se reduce a menos de cero, se ajusta a cero, esto tmb, depende del enfoque podriamos cambiarlo a q si llega a 0 o lleg a menos de 0 tenga un booleano como "alive" o "dead"
-     *creo que tmb voy a hacer eso de una vez
-     */
     void takeDamage(int damage) {
         if (currentHealth > 0) {
             currentHealth -= damage;
-            if ( currentHealth< 0) {
+            if (currentHealth < 0) {
                 currentHealth = 0;
             }
         }
     }
+
     bool isDestroyed() const {
         return currentHealth <= 0;
     }
+
     int getMaxHealth() const {
         return maxHealth;
     }
 
     void resetHealth() {
         currentHealth = maxHealth;
+    }
+
+    // Método para disparar la bala
+    void shoot(QPointF target, QGraphicsScene* scene, Map* map) {
+        Bullet* bullet = new Bullet(this, target, getAngle(), scene, map);
+        scene->addItem(bullet);
+    }
+
+    //Método para obtener el ángulo del tanque
+    qreal getAngle() const {
+        return 90; // El ángulo de disparo es de 90 grados
     }
 };
 

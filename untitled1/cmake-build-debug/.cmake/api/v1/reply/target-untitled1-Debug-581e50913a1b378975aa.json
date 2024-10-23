@@ -42,7 +42,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 24,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
@@ -310,21 +310,22 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				6
+				7
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				7
+				8
 			]
 		}
 	],
@@ -361,6 +362,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Player.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Bullet.h",
 			"sourceGroupIndex" : 1
 		},
 		{

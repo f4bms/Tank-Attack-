@@ -20,6 +20,7 @@ add_executable(untitled1 main.cpp
         GameLaunch.h
         Tank.h
         Player.h
+        Bullet.h
 )
 target_link_libraries(untitled1
         Qt6::Core
