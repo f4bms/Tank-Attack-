@@ -6,7 +6,7 @@
 
 class Map {
 private:
-    static const int rows = 12;
+    static const int rows = 15;
     static const int cols = 18;
     int adjMatrix[rows][cols];  // Matriz de adyacencia
 
@@ -18,8 +18,7 @@ public:
     // Constructor para inicializar la matriz con espacios libres
     Map() {
         resetMatrix();
-        generateObstacles();
-        printMatrix();
+        setObstaclesOnLastTwoRows();
     }
 
     // Reiniciar la matriz
@@ -45,6 +44,12 @@ public:
     void addEdge(int i, int j) {
         if (isValidIndex(i, j) && adjMatrix[i][j] == FREE_SPACE) {
             adjMatrix[i][j] = PATH;
+        }
+    }
+    void setObstaclesOnLastTwoRows() {
+        for (int j = 0; j < cols; ++j) {
+            adjMatrix[rows - 1][j] = OBSTACLE;       // Última fila
+            adjMatrix[rows - 2][j] = OBSTACLE;       // Penúltima fila
         }
     }
 
