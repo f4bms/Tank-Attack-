@@ -1,0 +1,5 @@
+C:/Tank-Attack-/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir
+C:/Tank-Attack-/untitled1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Tank-Attack-/untitled1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Tank-Attack-/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen_timestamp_deps.dir
+C:/Tank-Attack-/untitled1/cmake-build-debug/CMakeFiles/untitled1_autogen.dir
