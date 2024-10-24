@@ -4,7 +4,6 @@
 #include <QGraphicsEllipseItem>
 #include <QGraphicsScene>
 #include <QColor>
-#include "Bullet.h"
 
 class Tank {
 private:
