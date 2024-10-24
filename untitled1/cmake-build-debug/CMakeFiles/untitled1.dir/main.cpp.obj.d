@@ -475,15 +475,6 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:\Tank-Attack-\untitled1\main.cpp \
  C:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h \
  C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
  C:/Qt/6.7.2/mingw_64/include/QtGui/qcolor.h \
- C:\Tank-Attack-\untitled1\Bullet.h \
- C:/Qt/6.7.2/mingw_64/include/QtGui/QPainter \
- C:/Qt/6.7.2/mingw_64/include/QtGui/qpainter.h \
- C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF \
- C:/Qt/6.7.2/mingw_64/include/QtCore/qline.h \
- C:/Qt/6.7.2/mingw_64/include/QtCore/QVector \
- C:/Qt/6.7.2/mingw_64/include/QtCore/qvector.h \
- C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF \
- C:/Qt/6.7.2/mingw_64/include/QtCore/qpoint.h \
  C:\Tank-Attack-\untitled1\Player.h \
  C:\Tank-Attack-\untitled1\Pathfinding.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/queue \
@@ -492,5 +483,6 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:\Tank-Attack-\untitled1\main.cpp \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/deque.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_queue.h \
  C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qpoint.h \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QApplication \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qapplication.h

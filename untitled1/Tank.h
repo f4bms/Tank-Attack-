@@ -80,16 +80,10 @@ public:
         currentHealth = maxHealth;
     }
 
-    // Método para disparar la bala
-    void shoot(QPointF target, QGraphicsScene* scene, Map* map) {
-        Bullet* bullet = new Bullet(this, target, getAngle(), scene, map);
-        scene->addItem(bullet);
-    }
-
-    //Método para obtener el ángulo del tanque
     qreal getAngle() const {
         return 90; // El ángulo de disparo es de 90 grados
     }
 };
 
 #endif // TANK_H
+

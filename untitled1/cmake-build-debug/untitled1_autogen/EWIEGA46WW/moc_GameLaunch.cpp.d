@@ -262,16 +262,13 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDebug \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSizeF \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QVector \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -397,14 +394,12 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QBrush \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent \
-  C:/Qt/6.7.2/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
@@ -462,7 +457,6 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Tank-Attack-/untitled1/Bullet.h \
   C:/Tank-Attack-/untitled1/Graph.h \
   C:/Tank-Attack-/untitled1/Pathfinding.h \
   C:/Tank-Attack-/untitled1/Player.h \

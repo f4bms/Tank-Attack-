@@ -25,9 +25,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e8ec1637-9ddd-4dd0-8113-34e4868f8c66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/Bullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/Bullet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/GameLaunch.h" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/GameLaunch.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled1/Tank.h" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/Tank.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="untitled1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled1" TARGET_NAME="untitled1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled1" RUN_TARGET_NAME="untitled1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -109,7 +115,7 @@
       <workItem from="1729467943978" duration="5049000" />
       <workItem from="1729642121084" duration="46000" />
       <workItem from="1729658450655" duration="22000" />
-      <workItem from="1729726566602" duration="2232000" />
+      <workItem from="1729726566602" duration="6133000" />
     </task>
     <servers />
   </component>
