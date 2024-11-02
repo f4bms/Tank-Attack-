@@ -28,7 +28,6 @@
       <change beforePath="$PROJECT_DIR$/untitled1/GameLaunch.h" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/GameLaunch.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <workItem from="1729658450655" duration="22000" />
       <workItem from="1729726566602" duration="7561000" />
       <workItem from="1729738365302" duration="3444000" />
-      <workItem from="1730575066724" duration="5447000" />
+      <workItem from="1730575066724" duration="7873000" />
     </task>
     <servers />
   </component>

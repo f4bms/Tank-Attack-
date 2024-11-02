@@ -275,11 +275,9 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDebug \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
@@ -423,7 +421,6 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
-  C:/Qt/6.7.2/mingw_64/include/QtGui/QVector2D \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -769,11 +766,9 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDebug \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
@@ -918,7 +913,6 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
-  C:/Qt/6.7.2/mingw_64/include/QtGui/QVector2D \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -1067,8 +1061,6 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h:
-
-C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono_io.h:
 
@@ -1686,10 +1678,6 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/QList:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/QObject:
 
-C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h:
-
-C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF:
-
 C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/QSize:
@@ -1898,8 +1886,6 @@ C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform:
 
-C:/Qt/6.7.2/mingw_64/include/QtGui/QVector2D:
-
 C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qpainter.h:
@@ -1939,6 +1925,8 @@ C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h:
 C:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qrgb.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qtguiglobal.h:
 

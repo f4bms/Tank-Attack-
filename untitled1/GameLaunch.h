@@ -28,7 +28,7 @@ public:
     int bounceCount; // Contador de rebotes
 
     Bullet(QPointF pos, QPointF dir, qreal spd, Tank* tank, QGraphicsScene* scene)
-        : position(tank->getGraphicsItem()->pos()), direction(dir), speed(spd), shooter(tank), bounceCount(0) {
+        : position(pos), direction(dir), speed(spd), shooter(tank), bounceCount(0) {
         graphicsItem = scene->addEllipse(position.x(), position.y(), 5, 5, QPen(Qt::black), QBrush(Qt::black));
     }
 
@@ -132,7 +132,7 @@ protected:
                     rect->setBrush(Qt::red);
                 } else {
                     rect->setBrush(Qt::white);
-                    rect->setPen(QPen(Qt::black));
+                    rect->setPen(QPen(Qt::lightGray));
                 }
             }
         }
@@ -373,10 +373,17 @@ protected:
             }
         } else if (event->button() == Qt::RightButton) {
             if (selectedTank) {
+                // Obtener la posición del tanque seleccionado
+                QPointF tankPosition = selectedTank->getGraphicsItem()->scenePos(); // Cambiado a scenePos()
                 QPointF targetPoint = event->position();
-                QLineF line(selectedTank->getGraphicsItem()->pos(), targetPoint);
-                QPointF direction = line.unitVector().p2() - line.unitVector().p1();
-                bullets.append(new Bullet(selectedTank->getGraphicsItem()->pos(), direction, 5.0, selectedTank, &scene));
+                // Calcular la dirección desde el tanque hacia el punto de destino
+                QPointF direction = targetPoint - tankPosition;
+                // Normalizar la dirección
+                qreal length = std::sqrt(direction.x() * direction.x() + direction.y() * direction.y());
+                if (length != 0) {
+                    direction /= length; // Convertir a vector unitario
+                }
+                bullets.append(new Bullet(tankPosition, direction, 5.0, selectedTank, &scene));
                 selectedTank = nullptr;
             } else {
                 QGraphicsItem *item = itemAt(event->position().toPoint());
