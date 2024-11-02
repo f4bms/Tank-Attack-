@@ -269,6 +269,8 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -282,11 +284,13 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -303,6 +307,7 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qelapsedtimer.h \
@@ -380,6 +385,7 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -424,6 +430,7 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -433,6 +440,7 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen_platform.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtguiexports.h \
@@ -445,12 +453,18 @@ C:/Tank-Attack-/untitled1/cmake-build-debug/untitled1_autogen/EWIEGA46WW/moc_Gam
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h \

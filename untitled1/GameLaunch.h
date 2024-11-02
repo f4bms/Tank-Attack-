@@ -8,8 +8,10 @@
 #include <QDebug>
 #include <QBrush>
 #include <QWidget>
-#include <iostream>
-#include <random>
+#include <QTimer>
+#include <QTime>
+#include <QLabel>
+#include <QMessageBox>
 #include "Graph.h"
 #include "Tank.h"
 #include "Player.h"
@@ -23,12 +25,12 @@ public:
     qreal speed;
     Tank* shooter;
     QGraphicsEllipseItem* graphicsItem;
+    int bounceCount; // Contador de rebotes
 
     Bullet(QPointF pos, QPointF dir, qreal spd, Tank* tank, QGraphicsScene* scene)
-        : position(tank->getGraphicsItem()->pos()), direction(dir), speed(spd), shooter(tank) {
+        : position(tank->getGraphicsItem()->pos()), direction(dir), speed(spd), shooter(tank), bounceCount(0) {
         graphicsItem = scene->addEllipse(position.x(), position.y(), 5, 5, QPen(Qt::black), QBrush(Qt::black));
     }
-
 
     void move() {
         position += direction * speed;
@@ -48,9 +50,8 @@ public:
         if (position.y() <= wallRect.top() || position.y() >= wallRect.bottom()) {
             direction.setY(-direction.y());
         }
+        bounceCount++; // Incrementar el contador de rebotes
     }
-
-
 
     bool checkWallCollision(QGraphicsScene* scene) {
         for (QGraphicsItem* item : scene->items()) {
@@ -63,6 +64,9 @@ public:
         return false;
     }
 
+    bool shouldDisappear() {
+        return bounceCount >= 3; // Desaparecer después de 3 rebotes
+    }
 };
 
 class GameLaunch : public QGraphicsView {
@@ -75,15 +79,19 @@ private:
     int tileSize;
     Player player1;
     Player player2;
-    Tank* selectedTank = nullptr; // Tanque seleccionado
-    QList<QGraphicsLineItem*> currentPathLines; // Lista para almacenar las líneas de la ruta actual
+    Tank* selectedTank = nullptr;
+    QList<QGraphicsLineItem*> currentPathLines;
     QList<QGraphicsTextItem*> player1HealthTexts;
     QList<QGraphicsTextItem*> player2HealthTexts;
-    QList<Bullet*> bullets; // Lista para almacenar las balas
+    QList<Bullet*> bullets;
+
+    QTimer gameTimer;
+    QLabel* timerLabel;
+    int remainingTime; // En segundos, para 4 minutos será 240 segundos
 
 public:
     GameLaunch(QWidget *parent = nullptr)
-        : QGraphicsView(parent), numRows(gameMap.getNumRows()), numCols(gameMap.getNumCols()), tileSize(50) {
+        : QGraphicsView(parent), numRows(gameMap.getNumRows()), numCols(gameMap.getNumCols()), tileSize(50), remainingTime(240) {
         // Configurar la escena
         scene.setSceneRect(0, 0, tileSize * numCols, tileSize * numRows);
         this->setScene(&scene);
@@ -96,9 +104,18 @@ public:
         setFixedSize(tileSize * numCols + 20, tileSize * numRows + 20);
         player1.setTurn(true);
         player2.setTurn(false);
-        updateHealthDisplay(); // Mostrar la vida inicial
+        updateHealthDisplay();
 
-        // Iniciar el temporizador
+        // Configuración del temporizador de juego
+        timerLabel = new QLabel(this);
+        timerLabel->setStyleSheet("color: black; font: bold 16px;");
+        timerLabel->setGeometry(10, 10, 100, 30);
+        updateTimerLabel();
+
+        connect(&gameTimer, &QTimer::timeout, this, &GameLaunch::updateGameTimer);
+        gameTimer.start(1000); // Disminuir cada segundo
+
+        // Temporizador para la actualización de balas
         startTimer(16); // Aproximadamente 60 FPS
     }
 
@@ -122,14 +139,15 @@ protected:
     }
 
     void placeTexts() {
+        // Texto para el Jugador 1
         QGraphicsTextItem *player1Label = new QGraphicsTextItem("Player 1:");
-        player1Label->setPos(10, tileSize * (numRows - 2) + 10); // Posicionar el texto en la penúltima fila
+        player1Label->setPos(10, tileSize * (numRows - 2) + 10);
         player1Label->setDefaultTextColor(Qt::white);
         scene.addItem(player1Label);
+
         int startX1 = 100;
         int startY = tileSize * (numRows - 2) + 10;
-        // Dibujar la vida de los tanques del jugador 1
-        for (int i = 0; i < player1.getTanks().size(); ++i) {
+        for (int i = 0; i < 4; ++i) {
             Tank* tank = player1.getTanks()[i];
             QGraphicsTextItem *healthText = new QGraphicsTextItem(QString("Health: %1").arg(tank->getHealth()));
             healthText->setPos(startX1 + i * 150, startY);
@@ -137,37 +155,32 @@ protected:
             scene.addItem(healthText);
             player1HealthTexts.append(healthText);
         }
-        // Textos para el jugador 2
+
+        // Texto para el Jugador 2
         QGraphicsTextItem *player2Label = new QGraphicsTextItem("Player 2:");
-        player2Label->setPos(10, tileSize * (numRows - 1) + 10); // Justo arriba de la última fila
+        player2Label->setPos(10, tileSize * (numRows - 1) + 10);
         player2Label->setDefaultTextColor(Qt::white);
         scene.addItem(player2Label);
+
         int startX2 = 100;
         int startY2 = tileSize * (numRows - 1) + 10;
-        // Dibujar la vida de los tanques del jugador 2
-        for (int i = 0; i < player2.getTanks().size(); ++i) {
+        for (int i = 0; i < 4; ++i) {
             Tank* tank = player2.getTanks()[i];
             QGraphicsTextItem *healthText = new QGraphicsTextItem(QString("Health: %1").arg(tank->getHealth()));
             healthText->setPos(startX2 + i * 150, startY2);
             healthText->setDefaultTextColor(Qt::white);
             scene.addItem(healthText);
             player2HealthTexts.append(healthText);
-            scene.addItem(healthText); // Guardar la referencia para actualizar más tarde
         }
     }
 
     void updateHealthDisplay() {
-        // Actualizar la visualización de la vida de los tanques del jugador 1
-        for (int i = 0; i < player1HealthTexts.size(); ++i) {
-            if (i < player1.getTanks().size()) {
-                player1HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2").arg(i + 1).arg(player1.getTanks()[i]->getHealth()));
-            }
-        }
-        // Actualizar la visualización de la vida de los tanques del jugador 2
-        for (int i = 0; i < player2HealthTexts.size(); ++i) {
-            if (i < player2.getTanks().size()) {
-                player2HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2").arg(i + 1).arg(player2.getTanks()[i]->getHealth()));
-            }
+        // Actualizar la visualización de la salud para los 4 tanques de cada jugador
+        for (int i = 0; i < 4; ++i) {
+            player1HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2")
+                .arg(i + 1).arg(player1.getTanks()[i]->getHealth()));
+            player2HealthTexts[i]->setPlainText(QString("Tank %1 Health: %2")
+                .arg(i + 1).arg(player2.getTanks()[i]->getHealth()));
         }
     }
 
@@ -203,17 +216,19 @@ protected:
 
     void placeInitialTanks() {
         QRandomGenerator *randGen = QRandomGenerator::global();
-        // Colocar tanques rojos y azules en las primeras dos columnas de la izquierda
+
+        // Colocar 2 tanques rojos y 2 azules para el jugador 1
         for (int i = 0; i < 2; ++i) {
             int row, col;
             // Buscar posiciones aleatorias para los tanques rojos
             do {
                 row = randGen->bounded(numRows);
-                col = randGen->bounded(0, 2); // Se limitan las columnas
+                col = randGen->bounded(0, 2); // Limitamos las columnas a las dos primeras
             } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
-            placeTank(row, col, Qt::red); // Se coloca el tanque y se agrega al jugador 1
-            gameMap.addEdge(row, col); // Marca la celda como ocupada
+            placeTank(row, col, Qt::red); // Colocar tanque rojo
+            gameMap.addEdge(row, col); // Marcar celda como ocupada
         }
+
         for (int i = 0; i < 2; ++i) {
             int row, col;
             // Buscar posiciones aleatorias para los tanques azules
@@ -221,20 +236,22 @@ protected:
                 row = randGen->bounded(numRows);
                 col = randGen->bounded(0, 2);
             } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
-            placeTank(row, col, Qt::blue); // Se coloca el tanque y se agrega al jugador 2
+            placeTank(row, col, Qt::blue); // Colocar tanque azul
             gameMap.addEdge(row, col);
         }
-        // Colocar tanques amarillos y celestes en las primeras dos columnas de la derecha
+
+        // Colocar 2 tanques amarillos y 2 celestes para el jugador 2
         for (int i = 0; i < 2; ++i) {
             int row, col;
             // Buscar posiciones aleatorias para los tanques amarillos
             do {
                 row = randGen->bounded(numRows);
-                col = randGen->bounded(numCols - 2, numCols);
+                col = randGen->bounded(numCols - 2, numCols); // Limitamos las columnas a las dos últimas
             } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
-            placeTank(row, col, Qt::yellow); // Se coloca el tanque y se agrega al jugador 1
+            placeTank(row, col, Qt::yellow); // Colocar tanque amarillo
             gameMap.addEdge(row, col);
         }
+
         for (int i = 0; i < 2; ++i) {
             int row, col;
             // Buscar posiciones aleatorias para los tanques celestes
@@ -242,7 +259,7 @@ protected:
                 row = randGen->bounded(numRows);
                 col = randGen->bounded(numCols - 2, numCols);
             } while (gameMap.isObstacle(row, col) || gameMap.isOccupied(row, col));
-            placeTank(row, col, Qt::cyan); // Se coloca el tanque y se agrega al jugador 2
+            placeTank(row, col, Qt::cyan); // Colocar tanque celeste
             gameMap.addEdge(row, col);
         }
     }
@@ -407,6 +424,45 @@ protected:
 
     void timerEvent(QTimerEvent *event) override {
         updateBullets();
+    }
+    void updateTimerLabel() {
+        int minutes = remainingTime / 60;
+        int seconds = remainingTime % 60;
+        timerLabel->setText(QString("Time: %1:%2").arg(minutes, 2, 10, QChar('0')).arg(seconds, 2, 10, QChar('0')));
+    }
+
+    void updateGameTimer() {
+        remainingTime--;
+        updateTimerLabel();
+
+        if (remainingTime <= 0) {
+            endGame();
+        }
+    }
+
+    void endGame() {
+        gameTimer.stop(); // Detener el temporizador
+
+        int player1TotalHealth = 0;
+        int player2TotalHealth = 0;
+
+        for (Tank* tank : player1.getTanks()) {
+            player1TotalHealth += tank->getHealth();
+        }
+        for (Tank* tank : player2.getTanks()) {
+            player2TotalHealth += tank->getHealth();
+        }
+
+        QString winnerText;
+        if (player1TotalHealth > player2TotalHealth) {
+            winnerText = "Player 1 Wins!";
+        } else if (player2TotalHealth > player1TotalHealth) {
+            winnerText = "Player 2 Wins!";
+        } else {
+            winnerText = "It's a Tie!";
+        }
+
+        QMessageBox::information(this, "Game Over", winnerText);
     }
 };
 

@@ -456,7 +456,24 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:\Tank-Attack-\untitled1\main.cpp \
  C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qwidget.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qtimer.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qbasictimer.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/QTime \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox \
+ C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h \
+ C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
+ C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:\Tank-Attack-\untitled1\Graph.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
+ C:/Qt/6.7.2/mingw_64/include/QtCore/qrandom.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
@@ -466,9 +483,6 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:\Tank-Attack-\untitled1\main.cpp \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
- C:\Tank-Attack-\untitled1\Graph.h \
- C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
- C:/Qt/6.7.2/mingw_64/include/QtCore/qrandom.h \
  C:\Tank-Attack-\untitled1\Tank.h \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h \

@@ -275,13 +275,17 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDebug \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -295,11 +299,13 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -316,6 +322,7 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qelapsedtimer.h \
@@ -393,6 +400,7 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -415,6 +423,7 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QVector2D \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -437,6 +446,7 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -446,6 +456,7 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen_platform.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtguiexports.h \
@@ -459,13 +470,19 @@ CMakeFiles/untitled1.dir/main.cpp.obj: C:/Tank-Attack-/untitled1/main.cpp \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qapplication.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
@@ -752,13 +769,17 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDebug \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSize \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -772,11 +793,13 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -793,6 +816,7 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qelapsedtimer.h \
@@ -870,6 +894,7 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtmochelpers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtnoop.h \
@@ -893,6 +918,7 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QVector2D \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -915,6 +941,7 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -924,6 +951,9 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen_platform.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qtextcursor.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qtextformat.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtguiexports.h \
@@ -936,12 +966,18 @@ CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj: untitled1_a
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
@@ -1032,6 +1068,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h:
 
+C:/Qt/6.7.2/mingw_64/include/QtCore/QLineF:
+
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono_io.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qtpreprocessorsupport.h:
@@ -1085,6 +1123,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h:
 
@@ -1224,6 +1264,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h:
 
+C:/Qt/6.7.2/mingw_64/include/QtGui/qtextformat.h:
+
 C:/Qt/6.7.2/mingw_64/include/QtCore/qstringfwd.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qobjectdefs_impl.h:
@@ -1239,6 +1281,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Qt/6.7.2/mingw_64/include/QtCore/qmalloc.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_mutex.h:
 
@@ -1332,6 +1376,8 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/QPoint:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h:
 
+C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h:
@@ -1373,6 +1419,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h:
 
@@ -1570,6 +1618,8 @@ C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/errno.h:
 
+C:/Qt/6.7.2/mingw_64/include/QtCore/qtimer.h:
+
 C:/Qt/6.7.2/mingw_64/include/QtCore/qtdeprecationmarkers.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/limits.h:
@@ -1636,11 +1686,17 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/QList:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/QObject:
 
+C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtCore/QPointF:
+
 C:/Qt/6.7.2/mingw_64/include/QtCore/QRandomGenerator:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/QSize:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/QSizeF:
+
+C:/Qt/6.7.2/mingw_64/include/QtCore/QTime:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h:
 
@@ -1664,6 +1720,8 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic_cxx11.h:
 
+C:/Qt/6.7.2/mingw_64/include/QtCore/qbasictimer.h:
+
 C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearray.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qtclasshelpermacros.h:
@@ -1671,6 +1729,10 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/qtclasshelpermacros.h:
 C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayalgorithms.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtGui/qevent.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h:
 
@@ -1685,6 +1747,10 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreapplication.h:
 C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreapplication_platform.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtCore/qtaggedpointer.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h:
 
@@ -1701,6 +1767,8 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/qflags.h:
 C:/Qt/6.7.2/mingw_64/include/QtCore/qendian.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qeventloop.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qexceptionhandling.h:
 
@@ -1806,8 +1874,6 @@ C:/Qt/6.7.2/mingw_64/include/QtCore/qswap.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qsystemdetection.h:
 
-C:/Qt/6.7.2/mingw_64/include/QtCore/qtaggedpointer.h:
-
 C:/Qt/6.7.2/mingw_64/include/QtCore/qtconfigmacros.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtCore/qtcoreexports.h:
@@ -1832,6 +1898,8 @@ C:/Qt/6.7.2/mingw_64/include/QtGui/QMouseEvent:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/QTransform:
 
+C:/Qt/6.7.2/mingw_64/include/QtGui/QVector2D:
+
 C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qpainter.h:
@@ -1841,8 +1909,6 @@ C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h:
 C:/Qt/6.7.2/mingw_64/include/QtGui/qcolor.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qcursor.h:
-
-C:/Qt/6.7.2/mingw_64/include/QtGui/qevent.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qeventpoint.h:
 
@@ -1874,8 +1940,6 @@ C:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qrgb.h:
 
-C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h:
-
 C:/Qt/6.7.2/mingw_64/include/QtGui/qtguiglobal.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h:
@@ -1888,15 +1952,23 @@ C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene:
 
 C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView:
 
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel:
+
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox:
+
 C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget:
 
 C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h:
 
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h:
+
 C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h:
 
-C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h:
-
 C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h:
+
+C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h:
 
 C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h:
 
@@ -1911,5 +1983,7 @@ C:/Tank-Attack-/untitled1/Pathfinding.h:
 C:/Tank-Attack-/untitled1/Tank.h:
 
 untitled1_autogen/mocs_compilation.cpp:
+
+C:/Qt/6.7.2/mingw_64/include/QtGui/qtextcursor.h:
 
 untitled1_autogen/EWIEGA46WW/moc_GameLaunch.cpp:

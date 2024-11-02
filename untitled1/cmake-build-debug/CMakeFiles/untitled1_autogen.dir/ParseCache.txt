@@ -273,6 +273,8 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QRect
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QSize
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QSizeF
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QTime
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h
@@ -286,11 +288,13 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h
@@ -307,6 +311,7 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreevent.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qelapsedtimer.h
@@ -384,6 +389,7 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -428,6 +434,7 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h
@@ -437,6 +444,7 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qrgba64.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qscreen_platform.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qtguiexports.h
@@ -449,12 +457,18 @@ C:/Tank-Attack-/untitled1/GameLaunch.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsitem.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsscene.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qscrollarea.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h
