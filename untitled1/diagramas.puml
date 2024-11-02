@@ -1,0 +1,101 @@
+@startuml
+class Bullet {
+    +QPointF position
+    +QPointF direction
+    +qreal speed
+    +Tank* shooter
+    +QGraphicsEllipseItem* graphicsItem
+
+    +Bullet(QPointF pos, QPointF dir, qreal spd, Tank* tank, QGraphicsScene* scene)
+    +void move()
+    +bool checkCollision(Tank* tank)
+    +void reflect(QGraphicsRectItem* wall)
+    +bool checkWallCollision(QGraphicsScene* scene)
+}
+
+class GameLaunch {
+    -Map gameMap
+    -QGraphicsScene scene
+    -int numRows
+    -int numCols
+    -int tileSize
+    -Player player1
+    -Player player2
+    -Tank* selectedTank
+    -QList<QGraphicsLineItem*> currentPathLines
+    -QList<QGraphicsTextItem*> player1HealthTexts
+    -QList<QGraphicsTextItem*> player2HealthTexts
+    -QList<Bullet*> bullets
+
+    +GameLaunch(QWidget* parent = nullptr)
+    +void drawGrid()
+    +void placeTexts()
+    +void updateHealthDisplay()
+    +void updateHealthTexts()
+    +void switchTurn()
+    +void placeTank(int row, int col, const QColor &color)
+    +void placeInitialTanks()
+    +void moveTank(Tank* tank, int newRow, int newCol)
+    +void updateTankGraphics(Tank* tank)
+    +Tank* findTankAt(int row, int col)
+    +void executeMovementAlgorithm(Tank* tank, int targetRow, int targetCol)
+    +QVector<QPoint> convertToQVector(const std::vector<QPoint>& vec)
+    +void drawPath(const QVector<QPoint>& path)
+    +void clearCurrentPath()
+    +void mousePressEvent(QMouseEvent* event) override
+    +void updateBullets()
+    +void applyDamage(Tank* target, Tank* shooter)
+    +void timerEvent(QTimerEvent* event) override
+}
+
+class Tank {
+    +int row
+    +int col
+    +QColor color
+    +QGraphicsRectItem* graphicsItem
+    +int health
+
+    +int getRow()
+    +int getCol()
+    +QColor getColor()
+    +QGraphicsRectItem* getGraphicsItem()
+    +void takeDamage(int damage)
+    +void updatePosition(int row, int col)
+}
+
+class Player {
+    -bool turn
+    -QList<Tank*> tanks
+
+    +void setTurn(bool turn)
+    +bool getTurn()
+    +void addTank(Tank* tank)
+    +QList<Tank*> getTanks()
+}
+
+class Map {
+    +int getNumRows()
+    +int getNumCols()
+    +bool isObstacle(int row, int col)
+    +bool isOccupied(int row, int col)
+    +void addEdge(int row, int col)
+    +void removeEdge(int row, int col)
+    +void generateObstacles()
+    +void printMatrix()
+}
+
+class Pathfinding {
+    +static std::vector<QPoint> bfsPath(Map map, int startRow, int startCol, int targetRow, int targetCol)
+    +static std::vector<QPoint> dijkstraPath(Map map, int startRow, int startCol, int targetRow, int targetCol)
+    +static std::vector<QPoint> randomMove(Map map, int row, int col)
+}
+
+GameLaunch *-- Bullet
+GameLaunch *-- Tank
+GameLaunch *-- Player
+GameLaunch *-- Map
+GameLaunch *-- Pathfinding
+Tank *-- QGraphicsRectItem
+Player *-- Tank
+
+@enduml

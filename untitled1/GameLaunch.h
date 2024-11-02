@@ -25,9 +25,10 @@ public:
     QGraphicsEllipseItem* graphicsItem;
 
     Bullet(QPointF pos, QPointF dir, qreal spd, Tank* tank, QGraphicsScene* scene)
-        : position(pos), direction(dir), speed(spd), shooter(tank) {
-        graphicsItem = scene->addEllipse(pos.x(), pos.y(), 5, 5, QPen(Qt::black), QBrush(Qt::black));
+        : position(tank->getGraphicsItem()->pos()), direction(dir), speed(spd), shooter(tank) {
+        graphicsItem = scene->addEllipse(position.x(), position.y(), 5, 5, QPen(Qt::black), QBrush(Qt::black));
     }
+
 
     void move() {
         position += direction * speed;
@@ -40,7 +41,6 @@ public:
     }
 
     void reflect(QGraphicsRectItem* wall) {
-        // Calcular el rebote en la pared
         QRectF wallRect = wall->rect();
         if (position.x() <= wallRect.left() || position.x() >= wallRect.right()) {
             direction.setX(-direction.x());
@@ -49,6 +49,7 @@ public:
             direction.setY(-direction.y());
         }
     }
+
 
     bool checkWallCollision(QGraphicsScene* scene) {
         for (QGraphicsItem* item : scene->items()) {
@@ -60,6 +61,7 @@ public:
         }
         return false;
     }
+
 };
 
 class GameLaunch : public QGraphicsView {
@@ -345,11 +347,11 @@ protected:
     void mousePressEvent(QMouseEvent *event) override {
         if (event->button() == Qt::LeftButton) {
             if (selectedTank) {
-                int targetRow = event->position().y() / tileSize; // Asignar la fila de destino
-                int targetCol = event->position().x() / tileSize; // Asignar la columna de destino
+                int targetRow = event->position().y() / tileSize;
+                int targetCol = event->position().x() / tileSize;
                 executeMovementAlgorithm(selectedTank, targetRow, targetCol);
                 switchTurn();
-                selectedTank = nullptr; // Deseleccionar el tanque después de moverlo
+                selectedTank = nullptr;
             }
         } else if (event->button() == Qt::RightButton) {
             if (selectedTank) {
@@ -357,7 +359,7 @@ protected:
                 QLineF line(selectedTank->getGraphicsItem()->pos(), targetPoint);
                 QPointF direction = line.unitVector().p2() - line.unitVector().p1();
                 bullets.append(new Bullet(selectedTank->getGraphicsItem()->pos(), direction, 5.0, selectedTank, &scene));
-                selectedTank = nullptr; // Deseleccionar el tanque después de disparar
+                selectedTank = nullptr;
             } else {
                 QGraphicsItem *item = itemAt(event->position().toPoint());
                 if (!item) return;
@@ -369,6 +371,7 @@ protected:
             }
         }
     }
+
 
     void updateBullets() {
         for (Bullet* bullet : bullets) {
