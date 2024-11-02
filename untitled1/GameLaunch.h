@@ -26,9 +26,12 @@ public:
     Tank* shooter;
     QGraphicsEllipseItem* graphicsItem;
     int bounceCount; // Contador de rebotes
+    QGraphicsScene* scene; // Puntero a la escena
+    int tileSize; // Tamaño de la celda
+    const Map& gameMap; // Referencia al mapa
 
-    Bullet(QPointF pos, QPointF dir, qreal spd, Tank* tank, QGraphicsScene* scene)
-        : position(pos), direction(dir), speed(spd), shooter(tank), bounceCount(0) {
+    Bullet(QPointF pos, QPointF dir, qreal spd, Tank* tank, QGraphicsScene* scene, int tileSize, const Map& gameMap)
+        : position(pos), direction(dir), speed(spd), shooter(tank), bounceCount(0), scene(scene), tileSize(tileSize), gameMap(gameMap) {
         graphicsItem = scene->addEllipse(position.x(), position.y(), 5, 5, QPen(Qt::black), QBrush(Qt::black));
     }
 
@@ -38,34 +41,50 @@ public:
     }
 
     bool checkCollision(Tank* tank) {
-        // Verificar colisión con un tanque
         return (tank->getGraphicsItem()->contains(position));
     }
 
-    void reflect(QGraphicsRectItem* wall) {
-        QRectF wallRect = wall->rect();
-        if (position.x() <= wallRect.left() || position.x() >= wallRect.right()) {
+    void reflect() {
+        if (position.x() <= 0 || position.x() >= scene->sceneRect().width()) {
             direction.setX(-direction.x());
+            bounceCount++;
         }
-        if (position.y() <= wallRect.top() || position.y() >= wallRect.bottom()) {
+        if (position.y() <= 0 || position.y() >= scene->sceneRect().height()) {
             direction.setY(-direction.y());
+            bounceCount++;
         }
-        bounceCount++; // Incrementar el contador de rebotes
     }
 
-    bool checkWallCollision(QGraphicsScene* scene) {
+    bool checkWallCollision() {
+        // Verificar colisión con los bordes de la pantalla
+        if (position.x() <= 0 || position.x() >= scene->sceneRect().width() ||
+            position.y() <= 0 || position.y() >= scene->sceneRect().height()) {
+            reflect();
+            return true;
+            }
+
+        // Verificar colisión con los obstáculos del mapa
+        int row = static_cast<int>(position.y() / tileSize);
+        int col = static_cast<int>(position.x() / tileSize);
+        if (gameMap.getValue(row, col) == Map::OBSTACLE) {
+            reflect();
+            return true;
+        }
+
+        // Verificar colisión con los bordes negros
         for (QGraphicsItem* item : scene->items()) {
             QGraphicsRectItem* wall = dynamic_cast<QGraphicsRectItem*>(item);
-            if (wall && wall->contains(position)) {
-                reflect(wall);
+            if (wall && wall->pen().color() == Qt::black && wall->contains(position)) {
+                reflect();
                 return true;
             }
         }
+
         return false;
     }
 
     bool shouldDisappear() {
-        return bounceCount >= 3; // Desaparecer después de 3 rebotes
+        return bounceCount >= 3;
     }
 };
 
@@ -88,6 +107,19 @@ private:
     QTimer gameTimer;
     QLabel* timerLabel;
     int remainingTime; // En segundos, para 4 minutos será 240 segundos
+    bool isOccupied(int row, int col) {
+        for (Tank* tank : player1.getTanks()) {
+            if (tank->getRow() == row && tank->getCol() == col) {
+                return true;
+            }
+        }
+        for (Tank* tank : player2.getTanks()) {
+            if (tank->getRow() == row && tank->getCol() == col) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 public:
     GameLaunch(QWidget *parent = nullptr)
@@ -130,6 +162,7 @@ protected:
                     rect->setPen(Qt::NoPen); // Sin borde
                 } else if (gameMap.isObstacle(row, col)) {
                     rect->setBrush(Qt::red);
+                    rect->setPen(QPen(Qt::black)); // Borde negro
                 } else {
                     rect->setBrush(Qt::white);
                     rect->setPen(QPen(Qt::lightGray));
@@ -265,6 +298,10 @@ protected:
     }
 
     void moveTank(Tank *tank, int newRow, int newCol) {
+        if (gameMap.isObstacle(newRow, newCol) || isOccupied(newRow, newCol)) {
+            qDebug() << "Movimiento inválido: la casilla está ocupada o es un obstáculo.";
+            return;
+        }
         int oldRow = tank->getRow();
         int oldCol = tank->getCol();
         gameMap.removeEdge(oldRow, oldCol);
@@ -272,6 +309,7 @@ protected:
         tank->updatePosition(newRow, newCol);
         updateTankGraphics(tank);
     }
+
 
     void updateTankGraphics(Tank *tank) {
         tank->getGraphicsItem()->setRect(tank->getCol() * tileSize + 10, tank->getRow() * tileSize + 10, tileSize - 20, tileSize - 20);
@@ -383,7 +421,7 @@ protected:
                 if (length != 0) {
                     direction /= length; // Convertir a vector unitario
                 }
-                bullets.append(new Bullet(tankPosition, direction, 5.0, selectedTank, &scene));
+                bullets.append(new Bullet(tankPosition, direction, 5.0, selectedTank, &scene, tileSize, gameMap));
                 selectedTank = nullptr;
             } else {
                 QGraphicsItem *item = itemAt(event->position().toPoint());
@@ -397,28 +435,36 @@ protected:
         }
     }
 
+
     void updateBullets() {
-        for (Bullet* bullet : bullets) {
+        for (int i = bullets.size() - 1; i >= 0; --i) { // Iterar de atrás hacia adelante
+            Bullet* bullet = bullets[i];
             bullet->move();
+            // Verificar colisión con tanques
             for (Tank* tank : player1.getTanks()) {
                 if (bullet->checkCollision(tank)) {
                     applyDamage(tank, bullet->shooter);
-                    bullets.removeOne(bullet);
                     delete bullet;
+                    bullets.removeAt(i);
                     break;
                 }
             }
             for (Tank* tank : player2.getTanks()) {
                 if (bullet->checkCollision(tank)) {
                     applyDamage(tank, bullet->shooter);
-                    bullets.removeOne(bullet);
                     delete bullet;
+                    bullets.removeAt(i);
                     break;
                 }
             }
-            // Verificar colisión con paredes y reflejar
-            if (bullet->checkWallCollision(&scene)) {
-                continue;
+            // Verificar colisión con paredes y obstáculos
+            if (bullet->checkWallCollision()) {
+                bullet->reflect();
+            }
+            // Desaparecer si el número de rebotes es 3
+            if (bullet->shouldDisappear()) {
+                delete bullet;
+                bullets.removeAt(i);
             }
         }
     }

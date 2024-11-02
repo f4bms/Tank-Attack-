@@ -33,7 +33,14 @@ public:
     bool getTurn() const {
         return isTurn;
     }
+
+    Tank* getTankAt(int index) const {
+        if (index >= 0 && index < tanks.size()) {
+            return tanks[index];
+        }
+        return nullptr;
+    }
 };
 
-
 #endif // PLAYER_H
+

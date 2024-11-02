@@ -46,6 +46,7 @@ public:
             adjMatrix[i][j] = PATH;
         }
     }
+
     void setObstaclesOnLastTwoRows() {
         for (int j = 0; j < cols; ++j) {
             adjMatrix[rows - 1][j] = OBSTACLE;       // Última fila
@@ -136,6 +137,15 @@ public:
     // Obtener el número de filas y columnas
     int getNumRows() const { return rows; }
     int getNumCols() const { return cols; }
+
+    // Obtener el valor de una celda específica
+    int getValue(int row, int col) const {
+        if (isValidIndex(row, col)) {
+            return adjMatrix[row][col];
+        }
+        return FREE_SPACE; // O cualquier valor que represente una celda vacía
+    }
 };
 
 #endif // MAP_H
+
