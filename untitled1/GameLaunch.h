@@ -51,6 +51,7 @@ public:
     }
 
 
+
     bool checkWallCollision(QGraphicsScene* scene) {
         for (QGraphicsItem* item : scene->items()) {
             QGraphicsRectItem* wall = dynamic_cast<QGraphicsRectItem*>(item);
@@ -371,7 +372,6 @@ protected:
             }
         }
     }
-
 
     void updateBullets() {
         for (Bullet* bullet : bullets) {
