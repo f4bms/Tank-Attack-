@@ -409,30 +409,32 @@ protected:
                 switchTurn();
                 selectedTank = nullptr;
             }
-        } else if (event->button() == Qt::RightButton) {
-            if (selectedTank) {
-                // Obtener la posición del tanque seleccionado
-                QPointF tankPosition = selectedTank->getGraphicsItem()->scenePos(); // Cambiado a scenePos()
-                QPointF targetPoint = event->position();
-                // Calcular la dirección desde el tanque hacia el punto de destino
-                QPointF direction = targetPoint - tankPosition;
-                // Normalizar la dirección
-                qreal length = std::sqrt(direction.x() * direction.x() + direction.y() * direction.y());
-                if (length != 0) {
-                    direction /= length; // Convertir a vector unitario
-                }
-                bullets.append(new Bullet(tankPosition, direction, 5.0, selectedTank, &scene, tileSize, gameMap));
-                selectedTank = nullptr;
-            } else {
-                QGraphicsItem *item = itemAt(event->position().toPoint());
-                if (!item) return;
-                Tank *tank = findTankAt(item->data(0).toInt(), item->data(1).toInt());
-                if (tank) {
-                    selectedTank = tank;
-                    qDebug() << "Tanque seleccionado en (" << tank->getRow() << ", " << tank->getCol() << ")";
+            }else if (event->button() == Qt::RightButton) {
+                if (selectedTank) {
+                    // Obtener la posición del tanque seleccionado y ajustar la posición de la bala
+                    QPointF tankPosition = selectedTank->getGraphicsItem()->scenePos(); // Obtener la posición del tanque
+                    QPointF bulletPosition = tankPosition + QPointF(20, 20); // Ajustar al centro del tanque (40x40 pixels)
+                    QPointF targetPoint = event->position();
+                    // Calcular la dirección desde el tanque hacia el punto de destino
+                    QPointF direction = targetPoint - bulletPosition;
+                    // Normalizar la dirección
+                    qreal length = std::sqrt(direction.x() * direction.x() + direction.y() * direction.y());
+                    if (length != 0) {
+                        direction /= length; // Convertir a vector unitario
+                    }
+                    bullets.append(new Bullet(bulletPosition, direction, 5.0, selectedTank, &scene, tileSize, gameMap));
+                    selectedTank = nullptr; // Deseleccionar el tanque
+                } else {
+                    QGraphicsItem *item = itemAt(event->position().toPoint());
+                    if (!item) return;
+                    Tank *tank = findTankAt(item->data(0).toInt(), item->data(1).toInt());
+                    if (tank) {
+                        selectedTank = tank;
+                        qDebug() << "Tanque seleccionado en (" << tank->getRow() << ", " << tank->getCol() << ")";
+                    }
                 }
             }
-        }
+
     }
 
 
@@ -441,28 +443,28 @@ protected:
             Bullet* bullet = bullets[i];
             bullet->move();
             // Verificar colisión con tanques
+            bool collided = false;
             for (Tank* tank : player1.getTanks()) {
                 if (bullet->checkCollision(tank)) {
                     applyDamage(tank, bullet->shooter);
-                    delete bullet;
-                    bullets.removeAt(i);
+                    collided = true;
                     break;
                 }
             }
             for (Tank* tank : player2.getTanks()) {
                 if (bullet->checkCollision(tank)) {
                     applyDamage(tank, bullet->shooter);
-                    delete bullet;
-                    bullets.removeAt(i);
+                    collided = true;
                     break;
                 }
             }
             // Verificar colisión con paredes y obstáculos
             if (bullet->checkWallCollision()) {
-                bullet->reflect();
+                collided = true;
             }
-            // Desaparecer si el número de rebotes es 3
-            if (bullet->shouldDisappear()) {
+            // Eliminar la bala si ha colisionado o si debe desaparecer
+            if (collided || bullet->shouldDisappear()) {
+                scene.removeItem(bullet->graphicsItem);
                 delete bullet;
                 bullets.removeAt(i);
             }
